@@ -38,7 +38,7 @@ endef
 define Build/Configure
 endef
 
-define Package/announce/install
+define Package/srss/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/srss $(1)/usr/bin/
 endef
