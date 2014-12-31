@@ -32,9 +32,10 @@ install:
 script:
 - export PATH=$TRAVIS_BUILD_DIR/local/usr/bin:$PATH
 - cd $TRAVIS_BUILD_DIR/sdk/OpenWrt-SDK-*
-- make package/$PACKAGE/compile V=s
-- make package/$PACKAGE/install
-- make package/index
+- ./scripts/feeds update packages >/dev/null
+- ./scripts/feeds install libc
+- ./scripts/feeds install libm
+- make V=s
 - find $TRAVIS_BUILD_DIR/sdk/OpenWrt-SDK-*/bin/
 - find . -name *.ipk -exec cp {} $TRAVIS_BUILD_DIR \;
 before_deploy:
