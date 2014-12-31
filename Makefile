@@ -14,7 +14,7 @@ PKG_BUILD_PARALLEL:=1
 
 include $(INCLUDE_DIR)/package.mk
 
-# PKG_BUILD_DEPENDS:= +libpthread
+PKG_BUILD_DEPENDS:= +libc +libpthread
 
 define Package/srss
   SUBMENU:=Utilities
@@ -22,7 +22,7 @@ define Package/srss
   CATEGORY:=Utilities
   TITLE:=Calculate sunrise and sunset times 
   URL:=https://github.com/probonopd/srss-for-openwrt
-  DEPENDS:= +libpthread 
+  DEPENDS:= +libc 
 endef
 
 define Package/srss/description
