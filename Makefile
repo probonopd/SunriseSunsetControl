@@ -1,4 +1,5 @@
 #
+# This is a Makefile for OpenWrt.
 # To build, pull the announce repository into the "package/" subdirectory in the OpenWrt SDK,
 # then run "make V=s".
 #
@@ -20,7 +21,7 @@ define Package/srss
   SECTION:=utils
   CATEGORY:=Utilities
   TITLE:=Calculate sunrise and sunset times 
-  URL:=https://github.com/probonopd/srss
+  URL:=https://github.com/probonopd/srss-for-openwrt
   DEPENDS:= +libpthread 
 endef
 
