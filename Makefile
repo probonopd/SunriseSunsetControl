@@ -14,7 +14,7 @@ PKG_BUILD_PARALLEL:=1
 
 include $(INCLUDE_DIR)/package.mk
 
-PKG_BUILD_DEPENDS:= +libc +libm
+PKG_BUILD_DEPENDS:= +libc
 
 define Package/srss
   SUBMENU:=Utilities
