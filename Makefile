@@ -22,7 +22,7 @@ define Package/srss
   CATEGORY:=Utilities
   TITLE:=Calculate sunrise and sunset times 
   URL:=https://github.com/probonopd/srss-for-openwrt
-  DEPENDS:= +libc +libm
+  DEPENDS:= +libc
 endef
 
 define Package/srss/description
