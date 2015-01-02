@@ -28,7 +28,7 @@
     long=75.15
     for (( i=0; i <= 20; i++))
     do
-     ./sunrise    `date -d "+$i day" "+%Y %m %d"` $lat $long
+     srss    `date -d "+$i day" "+%Y %m %d"` $lat $long
     done
 
 
@@ -359,15 +359,15 @@ int main(int argc, char **argv)
 
   } else {
   printf("\nUsage: (note convert latitude and longitude to degrees) \n");
-  printf("./sunrise year month date latitude longitude \n\n");
+  printf("srss year month date latitude longitude \n\n");
   printf(" Latitude and longitude must be in degrees and or fraction of degrees. Not min sec\n");
   printf("\n US Listings Of Latitude and Longitude\n");
   printf("    http://www.census.gov/geo/www/tiger/latlng.txt\n");
   printf("    But use positive values for longitude for above listing\n");
 
   printf("\n Example: (Just outside Philadelphia PA, USA)\n\n");
-  printf("./sunrise 2004 8 21 39.95 75.15 \n");
-  printf("./sunrise `date \"+%cY %cm %cd\"` 39.95 75.15\n\n",'%','%','%');
+  printf("srss 2004 8 21 39.95 75.15 \n");
+  printf("srss `date \"+%cY %cm %cd\"` 39.95 75.15\n\n",'%','%','%');
   }
 
 
